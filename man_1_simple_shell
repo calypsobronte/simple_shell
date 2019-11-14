@@ -1,0 +1,27 @@
+.\" Manpage for Christian and Lina
+.\" Contact calypsobronte@calypsobronte.me or darkdrakkar@gmail.com in to correct errors or typos.
+.TH man 3 "14 Nov 2019" "1.0" "simple_shell man page"
+.SH NAME
+.B simple_shell
+.B dash
+-  UNIX command interpreter. (shell)
+.SH SYNOPSIS
+.B <falta>
+
+.SH DESCRIPTION
+<falta>
+
+.B Return value
+
+.SH OPTIONS
+others
+.SH SEE ALSO
+sh(3)
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+- Christian Suárez
+(darkdrakkar@gmail.com)
+
+- Lina María Montaño Ramírez
+(calypsobronte@calypsobronte.me)
