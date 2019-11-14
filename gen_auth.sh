@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 set -e
-
-cd "$(dirname "$(readlink -n "$BASH_SOURCE")")/.."
-
 {
 	cat <<-'EOH'
 	# This file lists all individuals having contributed content to the repository.
