@@ -232,4 +232,7 @@ char *_strtok(char *str, const char *delimitador)
 		}
 	}
 	end = NULL;
+    if (words == 1)
+		return (run_string);
+	return (NULL);
 }
