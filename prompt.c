@@ -225,5 +225,11 @@ char *_strtok(char *str, const char *delimitador)
 				break;
 			}
 		}
-    }
+		if (delimitador[j] == '\0' && words == 0)
+		{
+			words = 1;
+			run_string = str + i;
+		}
+	}
+	end = NULL;
 }
