@@ -211,5 +211,19 @@ char *_strtok(char *str, const char *delimitador)
 	else
 		end_string = str + _strlen(str);
 	for (i = 0; str + i < end_string; i++)
-	{}
+	{
+        for (j = 0; delimitador != NULL && delimitador[j] != '\0'; j++)
+		{
+			if (str[i] == delimitador[j])
+			{
+				if (words == 1)
+				{
+					str[i] = '\0';
+					end = str + i;
+					return (run_string);
+				}
+				break;
+			}
+		}
+    }
 }
