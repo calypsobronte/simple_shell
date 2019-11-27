@@ -11,7 +11,7 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 
-int main(int ac, char **av);
+int main();
 void free_shell(char **TokenMain, int size);
 int get_func(char *TokenMain, char **Token);
 

@@ -9,8 +9,7 @@
 int get_func(char *TokenMain, char **Token)
 {
 	char *search = NULL;
-	pid_t child_pid = 0;
-	int status = 0, i = 0;
+	int i = 0;
 
 	while (Token[i] != NULL)
 		i++;

@@ -5,7 +5,7 @@
  * @av: point of point
  * Return: 1
  */
-int main(int ac, char **av)
+int main()
 {
 	char *buffer = NULL, *TokenTemporal = NULL, **TokenMain = NULL;
 	size_t BUFFSIZE = 32, characters = 0;
