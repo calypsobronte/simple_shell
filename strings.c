@@ -7,14 +7,18 @@
  */
 char *_strcat(char *dest, char *src)
 {
-int words = 0, b;
-
-while (dest[words] != 0)
-words++;
-for (b = 0; src[b] != 0; b++, words++)
-dest[words] = src[b];
-dest[words] = 0;
-return (dest);
+	int str_len_destino = _strlen(dest);
+	int str_len_src = _strlen(src);
+	int str_len_maximo = str_len_destino + str_len_src - 1;
+	int i;
+	int cont = 0;
+	for (i = str_len_destino; i <= str_len_maximo; i++)
+	{
+		dest[i] = src[cont];
+		cont++;
+	}
+	dest[i] = '\0';
+	return (dest);
 }
 /**
  * _strcpy - copy of string
