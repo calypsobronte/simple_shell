@@ -19,7 +19,7 @@ int main()
 			perror("Unable to allocate buffer");
 			exit(1);
 		}
-		printf("HolbiPro $ ");
+		_printf("HolbiPro $ ");
 		characters = getline(&buffer, &BUFFSIZE, stdin);
 		TokenMain = malloc(sizeof(char *) * BUFFSIZE);
 		if (TokenMain == NULL)
@@ -28,7 +28,7 @@ int main()
 		{
 			free(TokenMain);
 			free(buffer);
-			printf("\n");
+			_printf("\n");
 			break;
 		}
 		TokenTemporal = _strtok(buffer, " ");
