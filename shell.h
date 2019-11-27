@@ -12,5 +12,6 @@
 #include <sys/wait.h>
 
 int main(int ac, char **av);
+void free_shell(char **TokenMain, int size);
 
 #endif /* libraries Simple Shell Holberton */
