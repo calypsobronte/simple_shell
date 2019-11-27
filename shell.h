@@ -11,7 +11,7 @@
 #include <signal.h>
 #include <sys/wait.h>
 
-int main(int ac, char **av)
+int main(int ac, char **av);
 void free_shell(char **TokenMain, int size);
 int get_func(char * TokenMain, char **Token);
 
