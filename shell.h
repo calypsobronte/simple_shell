@@ -17,4 +17,5 @@ int get_func(char *TokenMain, char **Token);
 
 char *_strcat(char *dest, char *src);
 char *_strcpy(char *dest, char *src);
+int _strlen(char *str);
 #endif /* libraries Simple Shell Holberton */

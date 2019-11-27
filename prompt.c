@@ -171,3 +171,20 @@ dest[cont_words] = 0;
 return (dest);
 }
 
+/**
+ * _strlen - counts length of a string
+ * @str: - letter string
+ * Return: number of string
+ */
+int _strlen(char *str)
+{
+char *point = str;
+size_t _string;
+
+_string = 0;
+if (str == NULL)
+	return (_string);
+while (*point++ != '\0')
+	_string++;
+return (_string);
+}
