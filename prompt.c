@@ -129,7 +129,9 @@ int get_func(char *TokenMain, char **Token)
 			return (0);
 		}
 		else
-			//waitpid(child_pid, &status, 0);
+			/*
+			* waitpid(child_pid, &status, 0);
+			*/
 			waitpid(child_pid, NULL, 0);
 
 	}
@@ -197,7 +199,6 @@ return (_string);
   */
 char *_strtok(char *str, const char *delimitador)
 {
-	//Lina
 	static char *run_string, *end_string, *end;
 	unsigned int i, j;
 	int words = 0;
