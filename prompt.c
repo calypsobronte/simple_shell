@@ -115,7 +115,6 @@ int get_func(char *TokenMain, char **Token)
 	Token[0] = malloc(sizeof(char) * _strlen(search) + 1);
 	_strcat(Token[0], search);
 
-
 	if (access(search, X_OK | F_OK) == 0)
 	{
 		child_pid = fork();
@@ -154,6 +153,21 @@ words++;
 for (b = 0; src[b] != 0; b++, words++)
 dest[words] = src[b];
 dest[words] = 0;
+return (dest);
+}
+
+/**
+ * _strcpy - copy of string
+ * @dest: string
+ * @src: string
+ * Return: dest a copy
+ */
+char *_strcpy(char *dest, char *src)
+{
+int cont_words;
+for (cont_words = 0; src[cont_words] != 0; cont_words++)
+dest[cont_words] = src[cont_words];
+dest[cont_words] = 0;
 return (dest);
 }
 

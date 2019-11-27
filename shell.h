@@ -16,4 +16,5 @@ void free_shell(char **TokenMain, int size);
 int get_func(char *TokenMain, char **Token);
 
 char *_strcat(char *dest, char *src);
+char *_strcpy(char *dest, char *src);
 #endif /* libraries Simple Shell Holberton */
