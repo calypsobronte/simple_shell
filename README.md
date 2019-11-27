@@ -37,6 +37,10 @@ Your shell should work like this in interactive mode:
 Holbertons:~ holberton$ ./hsh
 ```
 
+## Repositor of test
+
+[TestShell](https://github.com/calypsobronte/TestShell)
+
 ## Contributors
 
 - Christian Suárez
@@ -44,7 +48,7 @@ Holbertons:~ holberton$ ./hsh
     - Github: [@Thorlak2202]
 - Lina María Montaño Ramírez
     - Twitter: [@calypsobronte]
-    - Github: [@calypsobronte]
+    - Github: [@calypsobronte -]
 
 
 ## License
@@ -60,4 +64,4 @@ Holbertons:~ holberton$ ./hsh
 [@MetaAlchemist]: https://twitter.com/MetaAlchemist
 [@calypsobronte]: https://twitter.com/calypsobronte
 [@Thorlak2202]: https://github.com/Thorlak2202
-[@calypsobronte]: https://github.com/calypsobronte
+[@calypsobronte -]: https://github.com/calypsobronte
