@@ -68,3 +68,46 @@ if (TokenMain[i] != NULL)
 }
 free(TokenMain);
 }
+
+/**
+ * get_func - funcion con sus principales funcionamientos con los diferentes comando y tags
+ * @TokenMain: char
+ * @Token: token
+ * Return: 1
+ */
+
+int get_func(char *TokenMain, char **Token)
+{
+
+	char *search = NULL;
+	pid_t child_pid = 0;
+	int status = 0;
+	int i = 0;
+
+	while (Token[i] != NULL)
+		i++;
+	Token[i] = NULL;
+	if (i == 1)
+	{
+		TokenMain[_strlen(TokenMain) - 1] = '\0';
+	}
+	else if (i > 1)
+	{
+		Token[i - 1][_strlen(Token[i - 1]) - 1] = '\0';
+	}
+	/*
+	* cambio 27 nov
+	*/
+	if (TokenMain[0] == '/' || TokenMain[0] == '.')
+	{
+		search = malloc(sizeof(char) * _strlen(TokenMain) + 1);
+		_strcpy(search, TokenMain);
+
+	}
+	else
+	{
+		search = malloc(sizeof(char) * _strlen(TokenMain) + 6);
+		_strcpy(search, "/bin/");
+		_strcat(search, TokenMain);
+	}
+}
