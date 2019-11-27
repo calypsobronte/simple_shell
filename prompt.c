@@ -188,3 +188,17 @@ while (*point++ != '\0')
 	_string++;
 return (_string);
 }
+
+/**
+  * _strtok - tokenizes a string
+  * @str: string to tokenize
+  * @delimitador: string that contains the delimitadoriters
+  * Return: pointer to position in string of a null terminated word.
+  */
+char *_strtok(char *str, const char *delimitador)
+{
+	//Lina
+	static char *run_string, *end_string, *end;
+	unsigned int i, j;
+	int words = 0;
+}
