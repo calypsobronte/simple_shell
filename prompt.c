@@ -5,7 +5,7 @@
  * @av: point of point
  * Return: 1
  */
-int main(int ac, char **av)
+int main()
 {
 	char *buffer = NULL, *TokenTemporal = NULL, **TokenMain = NULL;
 	size_t BUFFSIZE = 32, characters = 0;
@@ -19,7 +19,7 @@ int main(int ac, char **av)
 			perror("Unable to allocate buffer");
 			exit(1);
 		}
-		printf("HolbiPro $ ");
+		_printf("HolbiPro $ ");
 		characters = getline(&buffer, &BUFFSIZE, stdin);
 		TokenMain = malloc(sizeof(char *) * BUFFSIZE);
 		if (TokenMain == NULL)
@@ -28,7 +28,7 @@ int main(int ac, char **av)
 		{
 			free(TokenMain);
 			free(buffer);
-			printf("\n");
+			_printf("\n");
 			break;
 		}
 		TokenTemporal = _strtok(buffer, " ");
