@@ -201,4 +201,15 @@ char *_strtok(char *str, const char *delimitador)
 	static char *run_string, *end_string, *end;
 	unsigned int i, j;
 	int words = 0;
+
+	if (str == NULL)
+	{
+		if (run_string == NULL || end == NULL)
+			return (NULL);
+		str = end + 1;
+	}
+	else
+		end_string = str + _strlen(str);
+	for (i = 0; str + i < end_string; i++)
+	{}
 }
