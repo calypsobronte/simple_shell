@@ -8,7 +8,8 @@
 int main(int ac, char **av)
 {
 
-	char *buffer = NULL, *TokenTemporal = NULL, **TokenMain = NULL;
+	char *buffer = NULL, *TokenTemporal = NULL;
+	char **TokenMain = NULL;
 	size_t BUFFSIZE = 32, characters = 0;
 	int i = 0, j = 0;
 
@@ -53,6 +54,7 @@ int main(int ac, char **av)
 		}
 		return (0);
 }
+
 /**
  * free_shell - funcion de para liberar en el main
  * @TokenMain: char
@@ -75,7 +77,6 @@ free(TokenMain);
  * @Token: token
  * Return: 1
  */
-
 int get_func(char *TokenMain, char **Token)
 {
 
@@ -96,8 +97,8 @@ int get_func(char *TokenMain, char **Token)
 		Token[i - 1][_strlen(Token[i - 1]) - 1] = '\0';
 	}
 	/*
-	* cambio 27 nov
-	*/
+    * cambio 27 nov
+    */
 	if (TokenMain[0] == '/' || TokenMain[0] == '.')
 	{
 		search = malloc(sizeof(char) * _strlen(TokenMain) + 1);
@@ -111,9 +112,10 @@ int get_func(char *TokenMain, char **Token)
 		_strcat(search, TokenMain);
 	}
 
-    free(Token[0]);
+	free(Token[0]);
 	Token[0] = malloc(sizeof(char) * _strlen(search) + 1);
 	_strcat(Token[0], search);
+
 
 	if (access(search, X_OK | F_OK) == 0)
 	{
@@ -130,8 +132,8 @@ int get_func(char *TokenMain, char **Token)
 		}
 		else
 			/*
-			* waitpid(child_pid, &status, 0);
-			*/
+            * waitpid(child_pid, &status, 0);
+            */
 			waitpid(child_pid, NULL, 0);
 
 	}
@@ -213,7 +215,8 @@ char *_strtok(char *str, const char *delimitador)
 		end_string = str + _strlen(str);
 	for (i = 0; str + i < end_string; i++)
 	{
-        for (j = 0; delimitador != NULL && delimitador[j] != '\0'; j++)
+		//lina
+		for (j = 0; delimitador != NULL && delimitador[j] != '\0'; j++)
 		{
 			if (str[i] == delimitador[j])
 			{
@@ -226,6 +229,7 @@ char *_strtok(char *str, const char *delimitador)
 				break;
 			}
 		}
+
 		if (delimitador[j] == '\0' && words == 0)
 		{
 			words = 1;
@@ -233,7 +237,8 @@ char *_strtok(char *str, const char *delimitador)
 		}
 	}
 	end = NULL;
-    if (words == 1)
+
+	if (words == 1)
 		return (run_string);
 	return (NULL);
 }
