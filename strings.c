@@ -8,6 +8,7 @@
 char *_strcat(char *dest, char *src)
 {
 int words = 0, b;
+
 while (dest[words] != 0)
 words++;
 for (b = 0; src[b] != 0; b++, words++)
@@ -56,6 +57,7 @@ char *_strtok(char *str, const char *delimitador)
 	static char *run_string, *end_string, *end;
 	unsigned int i, j;
 	int words = 0;
+
 	if (str == NULL)
 	{
 		if (run_string == NULL || end == NULL)
@@ -88,5 +90,5 @@ char *_strtok(char *str, const char *delimitador)
 	end = NULL;
 	if (words == 1)
 		return (run_string);
-		return (NULL);
+	return (NULL);
 }

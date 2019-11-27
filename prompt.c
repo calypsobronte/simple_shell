@@ -10,6 +10,7 @@ int main(int ac, char **av)
 	char *buffer = NULL, *TokenTemporal = NULL, **TokenMain = NULL;
 	size_t BUFFSIZE = 32, characters = 0;
 	int i = 0, j = 0;
+
 	while (1)
 	{
 		buffer = malloc(BUFFSIZE * sizeof(char));
