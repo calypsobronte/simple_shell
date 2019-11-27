@@ -1,11 +1,10 @@
 #include "shell.h"
 /**
  * main - funcion de la shell
- * @ac: int
- * @av: point of point
+ *
  * Return: 1
  */
-int main()
+int main(void)
 {
 	char *buffer = NULL, *TokenTemporal = NULL, **TokenMain = NULL;
 	size_t BUFFSIZE = 32, characters = 0;

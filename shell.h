@@ -12,7 +12,7 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 
-int main();
+int main(void);
 void free_shell(char **TokenMain, int size);
 int get_func(char *TokenMain, char **Token);
 
