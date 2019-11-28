@@ -6,7 +6,7 @@
 
 ## Description
 Simple Shell
-<--misdemeanor-->
+A shell is a user interface for access to an operating system’s services. In general, operating system shells use either a command-line interface (CLI) or graphical user interface (GUI), depending on a computer’s role and particular operation. It is named a shell because it is the outermost layer around the operating system kernel.
 
 ## Requirements
 
@@ -34,7 +34,12 @@ Holbertons:~ holberton$ gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
 Your shell should work like this in interactive mode:
 
 ```bash
-Holbertons:~ holberton$ ./hsh
+$ ./hsh
+($) /bin/ls
+hsh main.c shell.c
+($)
+($) exit
+$
 ```
 
 ## Repositor of test
