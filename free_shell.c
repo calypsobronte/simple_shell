@@ -6,7 +6,7 @@
  */
 void free_shell(char **TokenMain, int size)
 {
-int i;
+int i = 0;
 for (i = 0; i < size; i++)
 {
 if (TokenMain[i] != NULL)

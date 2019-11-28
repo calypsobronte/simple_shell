@@ -42,13 +42,13 @@ return (dest);
 int _strlen(char *str)
 {
 char *point = str;
-size_t _string;
-_string = 0;
+size_t words;
+words = 0;
 if (str == NULL)
-	return (_string);
+	return (words);
 while (*point++ != '\0')
-	_string++;
-return (_string);
+	words++;
+return (words);
 }
 /**
   * _strtok - tokenizes a string
@@ -95,4 +95,21 @@ char *_strtok(char *str, const char *delimitador)
 	if (words == 1)
 		return (run_string);
 	return (NULL);
+}
+
+/**
+ * _strcmp - description
+ * @s1: descript
+ * @s2: descript
+ * Return: j
+ */
+int _strcmp(char *s1, char *s2)
+{
+int a = 0, b, c, d;
+while (s1[a] == s2[a] && s1[a] != 0 && s2[a] != 0)
+a++;
+c = s1[a] + '0';
+d = s2[a] + '0';
+b = c - d;
+return (b);
 }
