@@ -12,6 +12,7 @@ char *_strcat(char *dest, char *src)
 	int str_len_maximo = str_len_destino + str_len_src - 1;
 	int i;
 	int cont = 0;
+
 	for (i = str_len_destino; i <= str_len_maximo; i++)
 	{
 		dest[i] = src[cont];

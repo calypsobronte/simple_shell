@@ -11,7 +11,7 @@ int get_func(char *TokenMain, char **Token)
 	char *search = NULL;
 	int i = 0;
 
-	while (Token[i] != NULL)// malo
+	while (Token[i] != NULL)
 		i++;
 	if (i == 1)
 		TokenMain[_strlen(TokenMain) - 1] = '\0';
@@ -29,7 +29,15 @@ int get_func(char *TokenMain, char **Token)
 		_strcpy(search, "/bin/");
 		_strcat(search, TokenMain);
 	}
-	exe_fun(Token, search);
+	free(TokenMain);
+	Token[0] = malloc(sizeof(char) * _strlen(search) + 1);
+	if (Token[0] == NULL)
+	{
+		perror("Unable memory llocation");
+		exit(1);
+	}
+	_strcpy(Token[0], search);
 	free(search);
+	exe_fun(Token, Token[0]);
 	return (1);
 }
