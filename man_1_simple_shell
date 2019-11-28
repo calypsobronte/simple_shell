@@ -18,7 +18,7 @@ reads lines from either a file or the terminal, interprets them, and generally e
 Returns 0 on success
 
 .SH EXAMPLES
-.B Compilation  -- : gcc -Wall -Werror -Wextra -pedantic *.c -o hsh 
+.B Compilation  -- : gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
 
 .B command
 
