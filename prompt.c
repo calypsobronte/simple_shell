@@ -83,8 +83,8 @@ int _printenv(void)
 	for (; s; i++)
 	{
 		printf("%s\n", s);
-		s = *(environ+i);
+		s = *(environ + i);
 	}
 
-	return 0;
+	return (0);
 }
