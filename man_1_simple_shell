@@ -42,7 +42,7 @@ If a simple command has been recognized, the shell performs the following action
            3.   The command is interpreted and executed.
 
 .SH SEE ALSO
-sh(3)
+dash(1)
 .SH BUGS
 No known bugs.
 .SH AUTHOR
