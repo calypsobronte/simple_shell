@@ -10,13 +10,6 @@ int exe_fun(char **Token, char *search)
 	pid_t child_pid;
 	int status;
 
-	Token[0] = malloc(sizeof(char) * _strlen(search) + 1);
-	if (Token[0] == NULL)
-	{
-		perror("Unable to allocate buffer");
-		exit(1);
-	}
-	_strcat(Token[0], search);
 	child_pid = fork();
 	if (child_pid == -1)
 	{
@@ -26,7 +19,9 @@ int exe_fun(char **Token, char *search)
 	if (child_pid == 0)
 	{
 	if ((access(search, X_OK | F_OK) == 0) == 1)
-		execve(search, Token, NULL);
+	{
+		execve(Token[0], Token, NULL);
+	}
 	else
 	{
 		free(search);
