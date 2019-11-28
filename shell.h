@@ -24,6 +24,7 @@ int _strlen(char *str);
 char *_strtok(char *str, const char *delimitador);
 int exe_fun(char **Token, char *search);
 int _printenv(void);
+int cmd_tokenizer(char *buffer, char *TokenTemporal, char **TokenMain);
 
 /*Function to use with printf */
 /**
