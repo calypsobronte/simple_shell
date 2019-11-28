@@ -10,14 +10,28 @@
 
 .SH DESCRIPTION
 This shell is a custom version of the standard command interpreter for UNIX.
-reads lines from either a file or the terminal, interprets them, and generally executes other commands. 
+reads lines from either a file or the terminal, interprets them, and generally executes other commands.
 
 
-.B Return value 
+
+.B Return value
 Returns 0 on success
 
+.SH EXAMPLES
+.B Compilation  -- : gcc -Wall -Werror -Wextra -pedantic *.c -o hsh 
+
+.B command
+
+HolbiPro $ ls -la
+
+.B output:
+
+AUTHORS            README.md          _buffer.c          _decimal.c         _printf.c          _unsigned.c        free_shell.c       hsh                man_1_simple_shell shell.h
+LICENSE            _binary.c          _charandstring.c   _octal.c           _putchar.c         exe_fun.c          get_func.c         hsh.dSYM           prompt.c           strings.c
+
+
 .SH OPTIONS
-this shell has no options.
+this shell has no other options than the ones the requested command have
 .SH SIMPLE COMMANDS
 If a simple command has been recognized, the shell performs the following actions:
 
