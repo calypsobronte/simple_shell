@@ -40,6 +40,10 @@ int main(void)
 		{
 			return (2);
 		}
+		else if (_strcmp(buffer, "env\n") == 0)
+		{
+			return (_printenv());
+		}
 		TokenTemporal = _strtok(buffer, " ");
 		i = 0;
 		while (TokenTemporal != NULL)
@@ -64,4 +68,23 @@ int main(void)
 		}
 		free(TokenTemporal);
 		return (0);
+}
+
+/**
+ * _printenv - funcion env
+ *
+ * Return: 0
+ */
+int _printenv(void)
+{
+	int i = 1;
+	char *s = *environ;
+
+	for (; s; i++)
+	{
+		printf("%s\n", s);
+		s = *(environ+i);
+	}
+
+	return 0;
 }
